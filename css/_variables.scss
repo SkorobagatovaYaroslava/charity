@@ -1,0 +1,20 @@
+$c-red: #bd0713;
+$c-orange:#ff9800;
+
+@mixin Comfortaa($size, $weight, $font-color) {
+    font: {
+        family: "Comfortaa", sans-serif;
+        size: $size + px;
+        weight: $weight;
+    }
+    color: $font-color;
+}
+
+@mixin Marck($size, $weight, $font-color) {
+    font: {
+        family: 'Marck Script', cursive;
+        size: $size + px;
+        weight: $weight;
+    }
+    color: $font-color;
+}

@@ -1,3 +1,5 @@
+@import "variables";
+
 * {
     font-family: "Comfortaa", sans-serif; // 'Marck Script', cursive;
 }
@@ -9,19 +11,72 @@
     margin-right: auto;
     margin-left: auto;
 
-    @media (min-width: 576px) {
-        max-width: 540px;
+        @media (min-width: 576px) {
+            max-width: 540px;
+        }
+
+        @media (min-width: 768px) {
+            max-width: 720px;
+        }
+
+        @media (min-width: 992px) {
+            max-width: 960px;
+        }
+
+        @media (min-width: 1200px) {
+            max-width: 1170px;
+        }
     }
 
-    @media (min-width: 768px) {
-        max-width: 720px;
+.Header {
+    padding: 0 25px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+
+    .Header_logo {
+        img {
+            max-width: 300px;
+        }
     }
 
-    @media (min-width: 992px) {
-        max-width: 960px;
-    }
+    .Header_menu {
+        list-style: none;
+        margin-top: 25px;
 
-    @media (min-width: 1200px) {
-        max-width: 1170px;
+        .Header_menu-item {
+            display: inline-block;
+            margin: 0 18px;
+            font-style: italic;
+            text-transform: lowercase;
+        }
+
+        .Header_menu-itemA {
+            @include Marck(20, 600, #000000);
+            text-decoration: none;
+            position: relative;
+
+            &:hover {
+                text-decoration: none;
+                color: $c-red;
+
+                &:hover:after {
+                    opacity: 1;
+                }
+            }
+
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                z-index: 1;
+                background-color: $c-red;
+                opacity: 0;
+                transition: 0.4s;
+                margin-top: 8px;
+            }
+        }
     }
 }

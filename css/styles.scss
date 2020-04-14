@@ -1,7 +1,16 @@
 @import "variables";
 
 * {
-    font-family: "Comfortaa", sans-serif; // 'Marck Script', cursive;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -11,50 +20,111 @@
     margin-right: auto;
     margin-left: auto;
 
-        @media (min-width: 576px) {
-            max-width: 540px;
-        }
-
-        @media (min-width: 768px) {
-            max-width: 720px;
-        }
-
-        @media (min-width: 992px) {
-            max-width: 960px;
-        }
-
-        @media (min-width: 1200px) {
-            max-width: 1170px;
-        }
+    @media (min-width: 576px) {
+        max-width: 540px;
     }
+
+    @media (min-width: 768px) {
+        max-width: 720px;
+    }
+
+    @media (min-width: 992px) {
+        max-width: 960px;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 1170px;
+    }
+}
 
 .Header {
-    padding: 0 25px;
-    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
+    padding: 0 50px;
+    position: absolute;
+    width: 100%;
 
-    .Header_logo {
-        img {
+    @include bp(m) {
+        padding: 0 10px 0 50px;
+    }
+
+    @include bp(l) {
+        padding: 0 50px;
+    }
+
+    &__logo {
+        max-width: 300px;
+        margin-left: -50px;
+
+        @include bp(s) {
+            max-width: 200px;
+            padding-top: 10px;
+            margin-left: -60px;
+        }
+
+        @include bp(m) {
+            max-width: 180px;
+            margin-left: -55px;
+        }
+
+        @include bp(l) {
+            max-width: 250px;
+            margin-left: -50px;
+        }
+
+        @include bp(md) {
             max-width: 300px;
+            margin-left: -45px;
         }
     }
 
-    .Header_menu {
+    &__menu {
         list-style: none;
         margin-top: 25px;
+        display: flex;
 
-        .Header_menu-item {
-            display: inline-block;
-            margin: 0 18px;
-            font-style: italic;
-            text-transform: lowercase;
+        @include bp(s) {
+            display: none;
         }
 
-        .Header_menu-itemA {
-            @include Marck(20, 600, #000000);
-            text-decoration: none;
+        @include bp(m) {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        @include bp(l) {
+            display: flex;
+            margin-top: 30px;
+        }
+
+        &-item {
+            margin: 0 18px;
+            text-transform: lowercase;
+
+            @include bp(m) {
+                margin: 0 12px;
+            }
+
+            @include bp(md) {
+                margin: 0 18px;
+            }
+        }
+
+        &-itemA {
+            @include Marck(20, 600, #000);
             position: relative;
+
+            @include bp(m) {
+                font-size: 13px;
+            }
+
+            @include bp(l) {
+                font-size: 15px;
+            }
+
+            @include bp(md) {
+                font-size: 20px;
+            }
 
             &:hover {
                 text-decoration: none;
@@ -71,12 +141,115 @@
                 position: absolute;
                 width: 100%;
                 height: 3px;
-                z-index: 1;
                 background-color: $c-red;
                 opacity: 0;
-                transition: 0.4s;
-                margin-top: 8px;
+                transition: 0.3s;
+                bottom: -8px;
             }
+        }
+    }
+}
+
+/* Top section */
+
+.Top {
+    background-image: url("../img/top_bg.jpg");
+    background-size: cover;
+    padding: 170px 50px 200px 50px;
+
+    @include bp(s) {
+        padding: 85px 25px 65px 25px;
+    }
+
+    @include bp(m) {
+        padding: 100px 25px;
+    }
+
+    @include bp(l) {
+        padding: 130px 50px;
+    }
+
+    @include bp(md) {
+        padding: 170px 50px 200px 50px;
+    }
+
+    &__title {
+        @include Comfortaa(100, 700, $c-red);
+        text-shadow: 1px 1px 6px #570606;
+
+        @include bp(s) {
+            font-size: 32px;
+        }
+
+        @include bp(m) {
+            font-size: 60px;
+        }
+
+        @include bp(l) {
+            font-size: 75px;
+        }
+
+        @include bp(md) {
+            font-size: 100px;
+        }
+    }
+
+    &__description {
+        @include Marck(75, 400, $c-orange);
+        padding: 25px 0 100px 0;
+
+        @include bp(s) {
+            font-size: 35px;
+            padding: 10px 0 40px 0;
+        }
+
+        @include bp(m) {
+            font-size: 50px;
+            padding: 15px 0 60px 0;
+        }
+
+        @include bp(l) {
+            font-size: 65px;
+            padding: 20px 0 75px 0;
+        }
+
+        @include bp(md) {
+            font-size: 75px;
+            padding: 25px 0 100px 0;
+        }
+    }
+
+    &__button {
+        @include Comfortaa(25, 600, $c-red);
+        border: 2px solid $c-red;
+        border-radius: 5px;
+        display: block;
+        background: transparent;
+        padding: 20px 50px;
+        transition: 0.3s;
+
+        @include bp(s) {
+            font-size: 14px;
+        }
+
+        @include bp(m) {
+            font-size: 16px;
+        }
+
+        @include bp(l) {
+            font-size: 20px;
+        }
+
+        @include bp(md) {
+            font-size: 25px;
+        }
+
+        &:hover {
+            background: white;
+            cursor: pointer;
+            color: $c-orange;
+            box-shadow: inset 0 0 0 3px #ff9800;
+            padding: 20px 100px;
         }
     }
 }

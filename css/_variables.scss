@@ -1,20 +1,50 @@
 $c-red: #bd0713;
-$c-orange:#ff9800;
+$c-orange: #ff9800;
 
-@mixin Comfortaa($size, $weight, $font-color) {
+@mixin Comfortaa($size, $weight, $color) {
     font: {
         family: "Comfortaa", sans-serif;
         size: $size + px;
         weight: $weight;
     }
-    color: $font-color;
+    color: $color;
 }
 
-@mixin Marck($size, $weight, $font-color) {
+@mixin Marck($size, $weight, $color) {
     font: {
-        family: 'Marck Script', cursive;
+        family: "Marck Script", cursive;
         size: $size + px;
         weight: $weight;
     }
-    color: $font-color;
+    color: $color;
+}
+
+
+@mixin bp($point) {
+    @if $point == s {
+        @media (min-width: 414px) {
+            @content;
+        }
+    } @else if $point == m {
+        @media (min-width: 768px) {
+            @content;
+        }
+    } @else if $point == l {
+        @media (min-width: 992px) {
+            @content;
+        }
+    } @else if $point == md {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    } @else if $point == xl {
+        @media (min-width: 1440px) {
+            @content;
+        }
+    } @else if $point {
+        // allows custom breakpoints
+        @media (min-width: $point) {
+            @content;
+        }
+    }
 }

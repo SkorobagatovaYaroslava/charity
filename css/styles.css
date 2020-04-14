@@ -1,5 +1,12 @@
 * {
-  font-family: "Comfortaa", sans-serif; }
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0; }
 
 .container {
   width: 100%;
@@ -21,42 +28,177 @@
       max-width: 1170px; } }
 
 .Header {
-  padding: 0 25px;
-  box-sizing: border-box;
   display: flex;
-  justify-content: space-between; }
-  .Header .Header_logo img {
-    max-width: 300px; }
-  .Header .Header_menu {
+  justify-content: space-between;
+  padding: 0 50px;
+  position: absolute;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .Header {
+      padding: 0 10px 0 50px; } }
+  @media (min-width: 992px) {
+    .Header {
+      padding: 0 50px; } }
+  .Header__logo {
+    max-width: 300px;
+    margin-left: -50px; }
+    @media (min-width: 414px) {
+      .Header__logo {
+        max-width: 200px;
+        padding-top: 10px;
+        margin-left: -60px; } }
+    @media (min-width: 768px) {
+      .Header__logo {
+        max-width: 180px;
+        margin-left: -55px; } }
+    @media (min-width: 992px) {
+      .Header__logo {
+        max-width: 250px;
+        margin-left: -50px; } }
+    @media (min-width: 1200px) {
+      .Header__logo {
+        max-width: 300px;
+        margin-left: -45px; } }
+  .Header__menu {
     list-style: none;
-    margin-top: 25px; }
-    .Header .Header_menu .Header_menu-item {
-      display: inline-block;
+    margin-top: 25px;
+    display: flex; }
+    @media (min-width: 414px) {
+      .Header__menu {
+        display: none; } }
+    @media (min-width: 768px) {
+      .Header__menu {
+        display: flex;
+        margin-top: 20px; } }
+    @media (min-width: 992px) {
+      .Header__menu {
+        display: flex;
+        margin-top: 30px; } }
+    .Header__menu-item {
       margin: 0 18px;
-      font-style: italic;
       text-transform: lowercase; }
-    .Header .Header_menu .Header_menu-itemA {
-      font-family: 'Marck Script', cursive;
+      @media (min-width: 768px) {
+        .Header__menu-item {
+          margin: 0 12px; } }
+      @media (min-width: 1200px) {
+        .Header__menu-item {
+          margin: 0 18px; } }
+    .Header__menu-itemA {
+      font-family: "Marck Script", cursive;
       font-size: 20px;
       font-weight: 600;
-      color: #000000;
-      text-decoration: none;
+      color: #000;
       position: relative; }
-      .Header .Header_menu .Header_menu-itemA:hover {
+      @media (min-width: 768px) {
+        .Header__menu-itemA {
+          font-size: 13px; } }
+      @media (min-width: 992px) {
+        .Header__menu-itemA {
+          font-size: 15px; } }
+      @media (min-width: 1200px) {
+        .Header__menu-itemA {
+          font-size: 20px; } }
+      .Header__menu-itemA:hover {
         text-decoration: none;
         color: #bd0713; }
-        .Header .Header_menu .Header_menu-itemA:hover:hover:after {
+        .Header__menu-itemA:hover:hover:after {
           opacity: 1; }
-      .Header .Header_menu .Header_menu-itemA:after {
+      .Header__menu-itemA:after {
         content: "";
         display: block;
         position: absolute;
         width: 100%;
         height: 3px;
-        z-index: 1;
         background-color: #bd0713;
         opacity: 0;
-        transition: 0.4s;
-        margin-top: 8px; }
+        transition: 0.3s;
+        bottom: -8px; }
+
+/* Top section */
+.Top {
+  background-image: url("../img/top_bg.jpg");
+  background-size: cover;
+  padding: 170px 50px 200px 50px; }
+  @media (min-width: 414px) {
+    .Top {
+      padding: 85px 25px 65px 25px; } }
+  @media (min-width: 768px) {
+    .Top {
+      padding: 100px 25px; } }
+  @media (min-width: 992px) {
+    .Top {
+      padding: 130px 50px; } }
+  @media (min-width: 1200px) {
+    .Top {
+      padding: 170px 50px 200px 50px; } }
+  .Top__title {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 100px;
+    font-weight: 700;
+    color: #bd0713;
+    text-shadow: 1px 1px 6px #570606; }
+    @media (min-width: 414px) {
+      .Top__title {
+        font-size: 32px; } }
+    @media (min-width: 768px) {
+      .Top__title {
+        font-size: 60px; } }
+    @media (min-width: 992px) {
+      .Top__title {
+        font-size: 75px; } }
+    @media (min-width: 1200px) {
+      .Top__title {
+        font-size: 100px; } }
+  .Top__description {
+    font-family: "Marck Script", cursive;
+    font-size: 75px;
+    font-weight: 400;
+    color: #ff9800;
+    padding: 25px 0 100px 0; }
+    @media (min-width: 414px) {
+      .Top__description {
+        font-size: 35px;
+        padding: 10px 0 40px 0; } }
+    @media (min-width: 768px) {
+      .Top__description {
+        font-size: 50px;
+        padding: 15px 0 60px 0; } }
+    @media (min-width: 992px) {
+      .Top__description {
+        font-size: 65px;
+        padding: 20px 0 75px 0; } }
+    @media (min-width: 1200px) {
+      .Top__description {
+        font-size: 75px;
+        padding: 25px 0 100px 0; } }
+  .Top__button {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: #bd0713;
+    border: 2px solid #bd0713;
+    border-radius: 5px;
+    display: block;
+    background: transparent;
+    padding: 20px 50px;
+    transition: 0.3s; }
+    @media (min-width: 414px) {
+      .Top__button {
+        font-size: 14px; } }
+    @media (min-width: 768px) {
+      .Top__button {
+        font-size: 16px; } }
+    @media (min-width: 992px) {
+      .Top__button {
+        font-size: 20px; } }
+    @media (min-width: 1200px) {
+      .Top__button {
+        font-size: 25px; } }
+    .Top__button:hover {
+      background: white;
+      cursor: pointer;
+      color: #ff9800;
+      box-shadow: inset 0 0 0 3px #ff9800;
+      padding: 20px 100px; }
 
 /*# sourceMappingURL=styles.css.map */

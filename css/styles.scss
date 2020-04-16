@@ -6,6 +6,10 @@
 
 a {
     text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 h1, h2, h3, h4 {
@@ -45,7 +49,7 @@ h1, h2, h3, h4 {
     width: 100%;
 
     @include bp(m) {
-        padding: 0 10px 0 50px;
+        padding: 0 10px;
     }
 
     @include bp(l) {
@@ -56,15 +60,15 @@ h1, h2, h3, h4 {
         max-width: 300px;
         margin-left: -50px;
 
-        @include bp(s) {
-            max-width: 200px;
+        @include bp(360px) {
             padding-top: 10px;
             margin-left: -60px;
+            max-width: 200px;
         }
 
         @include bp(m) {
             max-width: 180px;
-            margin-left: -55px;
+            margin-left: -15px;
         }
 
         @include bp(l) {
@@ -79,11 +83,11 @@ h1, h2, h3, h4 {
     }
 
     &__menu {
-        list-style: none;
-        margin-top: 25px;
         display: flex;
+        margin-top: 25px;
+        list-style: none;
 
-        @include bp(s) {
+        @include bp(360px) {
             display: none;
         }
 
@@ -93,13 +97,11 @@ h1, h2, h3, h4 {
         }
 
         @include bp(l) {
-            display: flex;
             margin-top: 30px;
         }
 
         &-item {
             margin: 0 18px;
-            text-transform: lowercase;
 
             @include bp(m) {
                 margin: 0 12px;
@@ -108,45 +110,42 @@ h1, h2, h3, h4 {
             @include bp(md) {
                 margin: 0 18px;
             }
-        }
 
-        &-itemA {
-            @include Marck(20, 600, #000);
-            position: relative;
+            &A {
+                position: relative;
+                @include Marck(20, 600, #000);
 
-            @include bp(m) {
-                font-size: 13px;
-            }
+                @include bp(m) {
+                    font-size: 15px;
+                }
 
-            @include bp(l) {
-                font-size: 15px;
-            }
+                @include bp(md) {
+                    font-size: 20px;
+                }
 
-            @include bp(md) {
-                font-size: 20px;
-            }
+                &:hover {
+                    color: $c-red;
+                }
 
-            &:hover {
-                text-decoration: none;
-                color: $c-red;
+                &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 3px;
+                    background: $c-red;
+                    opacity: 0;
+                    transition: .3s;
+                    bottom: -8px;
+                }
 
                 &:hover:after {
                     opacity: 1;
                 }
             }
-
-            &:after {
-                content: "";
-                display: block;
-                position: absolute;
-                width: 100%;
-                height: 3px;
-                background-color: $c-red;
-                opacity: 0;
-                transition: 0.3s;
-                bottom: -8px;
-            }
         }
+
+
     }
 }
 
@@ -157,12 +156,14 @@ h1, h2, h3, h4 {
     background-size: cover;
     padding: 170px 50px 200px 50px;
 
-    @include bp(s) {
+    @include bp(360px) {
         padding: 85px 25px 65px 25px;
+        background-position: center center;
     }
 
     @include bp(m) {
         padding: 100px 25px;
+        background-position: inherit;
     }
 
     @include bp(l) {
@@ -177,7 +178,7 @@ h1, h2, h3, h4 {
         @include Comfortaa(100, 700, $c-red);
         text-shadow: 1px 1px 6px #570606;
 
-        @include bp(s) {
+        @include bp(360px) {
             font-size: 32px;
         }
 
@@ -196,60 +197,135 @@ h1, h2, h3, h4 {
 
     &__description {
         @include Marck(75, 400, $c-orange);
-        padding: 25px 0 100px 0;
+        padding-top: 25px;
+        padding-bottom: 100px;
 
-        @include bp(s) {
+        @include bp(360px) {
             font-size: 35px;
-            padding: 10px 0 40px 0;
+            padding-top: 10px;
+            padding-bottom: 40px;
         }
 
         @include bp(m) {
             font-size: 50px;
-            padding: 15px 0 60px 0;
+            padding-top: 15px;
+            padding-bottom: 60px;
         }
 
         @include bp(l) {
             font-size: 65px;
-            padding: 20px 0 75px 0;
+            padding-top: 20px;
+            padding-bottom: 75px;
         }
 
         @include bp(md) {
             font-size: 75px;
-            padding: 25px 0 100px 0;
+            padding-top: 25px;
+            padding-bottom: 100px;
         }
     }
 
     &__button {
-        @include Comfortaa(25, 600, $c-red);
-        border: 2px solid $c-red;
-        border-radius: 5px;
+        position: relative;
         display: block;
-        background: transparent;
-        padding: 20px 50px;
-        transition: 0.3s;
+        overflow: hidden;
+        @include Comfortaa(25, 600, $c-red);
+        width: 100%;
+        height: 80px;
+        max-width: 250px;
+        border: 2px solid $c-red;
+        text-decoration: none;
+        line-height: 80px;
+        box-sizing: border-box;
+        transition: 0.5s ease-in-out;
+        text-align: center;
+        border-radius: 5px;
+        z-index: 0;
 
-        @include bp(s) {
+        &:before {
+            right: -50px;
+            border-right: 50px solid transparent;
+            transform: translateX(-100%);
+            transition: 0.5s ease-in-out;
+        }
+
+        &:after {
+            left: -50px;
+            border-left: 50px solid transparent;
+            transform: translateX(100%);
+            transition: 0.5s ease-in-out;
+        }
+
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-bottom: 80px solid $c-red;
+            z-index: -1;
+        }
+
+        &:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        &:hover:before {
+            transform: translateX(-40%);
+        }
+
+        &:before {
+            right: -50px;
+            border-right: 50px solid transparent;
+
+            @include bp(360px) {
+                right: -60px;
+            }
+        }
+
+        &:hover:after {
+            transform: translateX(40%);
+        }
+
+        &:after {
+            left: -50px;
+            border-left: 50px solid transparent;
+
+            @include bp(360px) {
+                left: -60px;
+            }
+        }
+
+        @include bp(360px) {
             font-size: 14px;
+            max-width: 150px;
+            height: 40px;
+            line-height: 40px;
         }
 
         @include bp(m) {
             font-size: 16px;
+            max-width: 200px;
+            height: 60px;
+            line-height: 60px;
         }
 
         @include bp(l) {
             font-size: 20px;
+            max-width: 250px;
+            height: 80px;
+            line-height: 80px;
         }
 
         @include bp(md) {
             font-size: 25px;
         }
 
-        &:hover {
-            background: white;
-            cursor: pointer;
-            color: $c-orange;
-            box-shadow: inset 0 0 0 3px #ff9800;
-            padding: 20px 100px;
-        }
+
     }
 }
+
+
+

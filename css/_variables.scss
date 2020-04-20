@@ -19,7 +19,6 @@ $c-orange: #ff9800;
     color: $color;
 }
 
-
 @mixin bp($point) {
     @if $point == s {
         @media (min-width: 414px) {

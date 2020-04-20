@@ -12,7 +12,7 @@ a {
     }
 }
 
-h1, h2, h3, h4 {
+h1, h2 {
     margin: 0;
     padding: 0;
 }
@@ -91,7 +91,6 @@ h1, h2, h3, h4 {
         }
 
         &-item {
-
             @include bp(m) {
                 margin: 0 12px;
             }
@@ -114,6 +113,10 @@ h1, h2, h3, h4 {
 
                 &:hover {
                     color: $c-red;
+
+                    &:after {
+                        opacity: 1;
+                    }
                 }
 
                 &:after {
@@ -127,14 +130,8 @@ h1, h2, h3, h4 {
                     transition: .3s;
                     bottom: -8px;
                 }
-
-                &:hover:after {
-                    opacity: 1;
-                }
             }
         }
-
-
     }
 }
 
@@ -204,13 +201,13 @@ h1, h2, h3, h4 {
         position: relative;
         display: block;
         overflow: hidden;
-        @include Comfortaa(25, 600, $c-red);
+        @include Comfortaa(14, 600, $c-red);
         width: 100%;
-        height: 80px;
-        max-width: 250px;
+        max-width: 150px;
+        height: 40px;
         border: 2px solid $c-red;
         text-decoration: none;
-        line-height: 80px;
+        line-height: 40px;
         box-sizing: border-box;
         transition: 0.5s ease-in-out;
         text-align: center;
@@ -245,10 +242,14 @@ h1, h2, h3, h4 {
         &:hover {
             color: white;
             text-decoration: none;
-        }
 
-        &:hover:before {
-            transform: translateX(-40%);
+            &:before {
+                transform: translateX(-40%);
+            }
+
+            &:after {
+                transform: translateX(40%);
+            }
         }
 
         &:before {
@@ -260,24 +261,13 @@ h1, h2, h3, h4 {
             }
         }
 
-        &:hover:after {
-            transform: translateX(40%);
-        }
-
         &:after {
-            left: -50px;
+            left: -60px;
             border-left: 50px solid transparent;
 
-            @include bp(360px) {
-                left: -60px;
+            @include bp(m) {
+                left: -50px;
             }
-        }
-
-        @include bp(360px) {
-            font-size: 14px;
-            max-width: 150px;
-            height: 40px;
-            line-height: 40px;
         }
 
         @include bp(m) {
@@ -297,8 +287,6 @@ h1, h2, h3, h4 {
         @include bp(md) {
             font-size: 25px;
         }
-
-
     }
 }
 

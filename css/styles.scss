@@ -290,5 +290,127 @@ h1, h2 {
     }
 }
 
+/* section Team */
+
+.section__title {
+    @include Comfortaa(32, 600, $c-orange);
+    padding-bottom: 30px;
+    text-align: center;
+    position: relative;
+
+    @include bp(m) {
+        @include Comfortaa(60, 600, $c-orange);
+    }
+
+    @include bp(l) {
+        @include Comfortaa(75, 600, $c-orange);
+    }
+
+    @include bp(md) {
+        @include Comfortaa(100, 600, $c-orange);
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        width: 50px;
+        padding-bottom: 35px;
+        margin-bottom: 20px;
+        margin-left: 50%;
+        transform: translate(-50%);
+        border-radius: 10px;
+        border-bottom: 6px solid $c-orange;
+
+        @include bp(m) {
+            padding-bottom: 40px;
+            border-bottom: 6px solid $c-orange;
+            width: 80px;
+        }
+
+        @include bp(l) {
+            padding-bottom: 30px;
+            border-bottom: 8px solid $c-orange;
+        }
+
+        @include bp(md) {
+            padding-bottom: 45px;
+        }
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 50%;
+        padding-bottom: 20px;
+        width: 120px;
+        transform: translate(50%);
+        border-bottom: 6px solid $c-red;
+        border-radius: 10px;
+
+        @include bp(m) {
+            top: 80px;
+            width: 150px;
+            border-bottom: 6px solid $c-red;
+        }
+
+        @include bp(l) {
+            top: 90px;
+            border-bottom: 8px solid $c-red;
+        }
+
+        @include bp(md) {
+            top: 135px;
+            width: 180px;
+        }
+    }
+}
+
+.Team {
+    background: url(../img/team-bg.jpg);
+    background-size: cover;
+    padding: 40px 0 20px;
+    text-align: center;
+
+    &__person {
+        &-photo {
+            @include bp(360px) {
+                max-width: 300px;
+                margin: auto;
+            }
+
+            @include bp(l) {
+                max-width: 400px;
+                padding: 50px 0 70px;
+            }
+        }
+
+        &-name {
+            @include Marck(25, 800, $c-red);
+            padding-top: 15px;
+            position: relative;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                right: 50%;
+                bottom: -5px;
+                width: 30px;
+                transform: translate(50%);
+                border-bottom: 2px solid $c-red;
+            }
+        }
+
+        &-position {
+            @include Comfortaa(16, 400, $c-orange);
+            padding: 10px 0 15px;
+            text-transform: lowercase;
+        }
+    }
+}
+
+
 
 

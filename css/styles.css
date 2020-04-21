@@ -1,3 +1,21 @@
+.Team__title {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #ff9800;
+  padding-bottom: 30px;
+  text-align: center;
+  position: relative; }
+  @media (min-width: 768px) {
+    .Team__title {
+      font-size: 60px; } }
+  @media (min-width: 992px) {
+    .Team__title {
+      font-size: 75px; } }
+  @media (min-width: 1200px) {
+    .Team__title {
+      font-size: 100px; } }
+
 * {
   box-sizing: border-box; }
 
@@ -225,5 +243,44 @@ h1, h2 {
     @media (min-width: 1200px) {
       .Top__button {
         font-size: 25px; } }
+
+/* section Team */
+.Team {
+  background: url(../img/team-bg.jpg);
+  background-size: cover;
+  padding: 40px 0 20px;
+  text-align: center; }
+  @media (min-width: 360px) {
+    .Team__person-photo {
+      max-width: 300px;
+      margin: auto; } }
+  @media (min-width: 992px) {
+    .Team__person-photo {
+      max-width: 400px;
+      padding: 50px 0 70px; } }
+  .Team__person-name {
+    font-family: "Marck Script", cursive;
+    font-size: 25px;
+    font-weight: 800;
+    color: #bd0713;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    position: relative; }
+    .Team__person-name:before {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 50%;
+      bottom: -5px;
+      width: 25px;
+      transform: translate(50%);
+      border-bottom: 2px solid #bd0713; }
+  .Team__person-position {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #ff9800;
+    padding: 15px 0 15px;
+    text-transform: lowercase; }
 
 /*# sourceMappingURL=styles.css.map */

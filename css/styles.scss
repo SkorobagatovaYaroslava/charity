@@ -135,8 +135,6 @@ h1, h2 {
     }
 }
 
-/* Top section */
-
 .Top {
     background-image: url("../img/top_bg.jpg");
     background-size: cover;
@@ -154,6 +152,10 @@ h1, h2 {
 
     @include bp(md) {
         padding: 170px 50px 200px 50px;
+    }
+
+    @include bp(1500px) {
+        background-position: right;
     }
 
     &__title {
@@ -290,12 +292,10 @@ h1, h2 {
     }
 }
 
-/* section Team */
-
 .Team {
     background: url(../img/team-bg.jpg);
     background-size: cover;
-    padding: 40px 0 20px;
+    padding: 100px 0;
     text-align: center;
 
     &__title {
@@ -341,17 +341,16 @@ h1, h2 {
     }
 }
 
-/* section Statistics */
-
 .Statistics {
     background-color: $c-orange;
     background-image: url("../img/bg-mask.png");
     background-blend-mode: overlay;
-    padding: 30px 0 70px;
+    padding: 100px 0;
 
     &__title {
         @extend %title;
         color: white;
+        margin-bottom: 100px;
     }
 
     &__content {
@@ -374,7 +373,7 @@ h1, h2 {
 
             &-number {
                 @include Marck(75, 800, $c-red);
-                text-shadow: 1px 2px 2px #CECECE;
+                text-shadow: 1px 1px 0 #fff;
 
                 @include bp(m) {
                     font-size: 85px;

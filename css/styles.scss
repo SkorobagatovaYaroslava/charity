@@ -341,6 +341,65 @@ h1, h2 {
     }
 }
 
+/* section Statistics */
+
+.Statistics {
+    background-color: $c-orange;
+    background-image: url("../img/bg-mask.png");
+    background-blend-mode: overlay;
+    padding: 30px 0 70px;
+
+    &__title {
+        @extend %title;
+        color: white;
+    }
+
+    &__content {
+        display: flex;
+        text-align: center;
+
+        @include bp(360px) {
+            flex-wrap: wrap;
+        }
+
+        @include bp(m) {
+            justify-content: space-between;
+            flex-wrap: nowrap;
+        }
+
+        .Statistics__block {
+            @include bp(360px) {
+                width: 49%;
+            }
+
+            &-number {
+                @include Marck(75, 800, $c-red);
+                text-shadow: 1px 2px 2px #CECECE;
+
+                @include bp(m) {
+                    font-size: 85px;
+                }
+
+                @include bp(l) {
+                    font-size: 100px;
+                }
+            }
+
+            &-text {
+                @include Comfortaa(15, 400, white);
+
+                @include bp(m) {
+                    font-size: 18px;
+                }
+
+                @include bp(l) {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
 
 
 

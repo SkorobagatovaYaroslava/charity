@@ -1,4 +1,4 @@
-.Team__title {
+.Team__title, .Statistics__title {
   font-family: "Comfortaa", sans-serif;
   font-size: 32px;
   font-weight: 600;
@@ -7,13 +7,13 @@
   text-align: center;
   position: relative; }
   @media (min-width: 768px) {
-    .Team__title {
+    .Team__title, .Statistics__title {
       font-size: 60px; } }
   @media (min-width: 992px) {
-    .Team__title {
+    .Team__title, .Statistics__title {
       font-size: 75px; } }
   @media (min-width: 1200px) {
-    .Team__title {
+    .Team__title, .Statistics__title {
       font-size: 100px; } }
 
 * {
@@ -282,5 +282,50 @@ h1, h2 {
     color: #ff9800;
     padding: 15px 0 15px;
     text-transform: lowercase; }
+
+/* section Statistics */
+.Statistics {
+  background-color: #ff9800;
+  background-image: url("../img/bg-mask.png");
+  background-blend-mode: overlay;
+  padding: 30px 0 70px; }
+  .Statistics__title {
+    color: white; }
+  .Statistics__content {
+    display: flex;
+    text-align: center; }
+    @media (min-width: 360px) {
+      .Statistics__content {
+        flex-wrap: wrap; } }
+    @media (min-width: 768px) {
+      .Statistics__content {
+        justify-content: space-between;
+        flex-wrap: nowrap; } }
+    @media (min-width: 360px) {
+      .Statistics__content .Statistics__block {
+        width: 49%; } }
+    .Statistics__content .Statistics__block-number {
+      font-family: "Marck Script", cursive;
+      font-size: 75px;
+      font-weight: 800;
+      color: #bd0713;
+      text-shadow: 1px 2px 2px #CECECE; }
+      @media (min-width: 768px) {
+        .Statistics__content .Statistics__block-number {
+          font-size: 85px; } }
+      @media (min-width: 992px) {
+        .Statistics__content .Statistics__block-number {
+          font-size: 100px; } }
+    .Statistics__content .Statistics__block-text {
+      font-family: "Comfortaa", sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: white; }
+      @media (min-width: 768px) {
+        .Statistics__content .Statistics__block-text {
+          font-size: 18px; } }
+      @media (min-width: 992px) {
+        .Statistics__content .Statistics__block-text {
+          font-size: 20px; } }
 
 /*# sourceMappingURL=styles.css.map */

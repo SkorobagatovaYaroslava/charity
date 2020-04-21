@@ -364,35 +364,35 @@ h1, h2 {
             justify-content: space-between;
             flex-wrap: nowrap;
         }
+    }
 
-        .Statistics__block {
-            @include bp(360px) {
-                width: 49%;
+    &__block {
+        @include bp(360px) {
+            width: 49%;
+        }
+
+        &-number {
+            @include Marck(75, 800, $c-red);
+            text-shadow: 1px 1px 0 #fff;
+
+            @include bp(m) {
+                font-size: 85px;
             }
 
-            &-number {
-                @include Marck(75, 800, $c-red);
-                text-shadow: 1px 1px 0 #fff;
+            @include bp(l) {
+                font-size: 100px;
+            }
+        }
 
-                @include bp(m) {
-                    font-size: 85px;
-                }
+        &-text {
+            @include Comfortaa(15, 400, white);
 
-                @include bp(l) {
-                    font-size: 100px;
-                }
+            @include bp(m) {
+                font-size: 18px;
             }
 
-            &-text {
-                @include Comfortaa(15, 400, white);
-
-                @include bp(m) {
-                    font-size: 18px;
-                }
-
-                @include bp(l) {
-                    font-size: 20px;
-                }
+            @include bp(l) {
+                font-size: 20px;
             }
         }
     }

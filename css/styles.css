@@ -405,11 +405,11 @@ h1, h2 {
   }
 }
 @media (min-width: 360px) {
-  .Statistics__content .Statistics__block {
+  .Statistics__block {
     width: 49%;
   }
 }
-.Statistics__content .Statistics__block-number {
+.Statistics__block-number {
   font-family: "Marck Script", cursive;
   font-size: 75px;
   font-weight: 800;
@@ -417,28 +417,28 @@ h1, h2 {
   text-shadow: 1px 1px 0 #fff;
 }
 @media (min-width: 768px) {
-  .Statistics__content .Statistics__block-number {
+  .Statistics__block-number {
     font-size: 85px;
   }
 }
 @media (min-width: 992px) {
-  .Statistics__content .Statistics__block-number {
+  .Statistics__block-number {
     font-size: 100px;
   }
 }
-.Statistics__content .Statistics__block-text {
+.Statistics__block-text {
   font-family: "Comfortaa", sans-serif;
   font-size: 15px;
   font-weight: 400;
   color: white;
 }
 @media (min-width: 768px) {
-  .Statistics__content .Statistics__block-text {
+  .Statistics__block-text {
     font-size: 18px;
   }
 }
 @media (min-width: 992px) {
-  .Statistics__content .Statistics__block-text {
+  .Statistics__block-text {
     font-size: 20px;
   }
 }

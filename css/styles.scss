@@ -1,5 +1,20 @@
+@import "variables";
+
 * {
-    font-family: "Comfortaa", sans-serif; // 'Marck Script', cursive;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -25,3 +40,255 @@
         max-width: 1170px;
     }
 }
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    position: absolute;
+    width: 100%;
+
+    @include bp(m) {
+        padding: 0 10px;
+    }
+
+    @include bp(l) {
+        padding: 0 50px;
+    }
+
+    &__logo {
+        max-width: 200px;
+        margin-left: -60px;
+        padding-top: 10px;
+
+        @include bp(m) {
+            max-width: 180px;
+            margin-left: -15px;
+        }
+
+        @include bp(l) {
+            max-width: 250px;
+            margin-left: -50px;
+        }
+
+        @include bp(md) {
+            max-width: 300px;
+            margin-left: -45px;
+        }
+    }
+
+    &__menu {
+        display: none;
+
+        @include bp(m) {
+            display: flex;
+            margin-top: 25px;
+            list-style: none;
+        }
+
+        @include bp(l) {
+            margin-top: 30px;
+        }
+
+        &-item {
+            @include bp(m) {
+                margin: 0 12px;
+            }
+
+            @include bp(md) {
+                margin: 0 18px;
+            }
+
+            &A {
+                position: relative;
+                @include Marck(20, 600, #000);
+
+                @include bp(m) {
+                    font-size: 15px;
+                }
+
+                @include bp(md) {
+                    font-size: 20px;
+                }
+
+                &:hover {
+                    color: $c-red;
+
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+
+                &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 3px;
+                    background: $c-red;
+                    opacity: 0;
+                    transition: .3s;
+                    bottom: -8px;
+                }
+            }
+        }
+    }
+}
+
+/* Top section */
+
+.Top {
+    background-image: url("../img/top_bg.jpg");
+    background-size: cover;
+    padding: 85px 25px 65px 25px;
+    background-position: center center;
+
+    @include bp(m) {
+        padding: 100px 25px;
+        background-position: inherit;
+    }
+
+    @include bp(l) {
+        padding: 130px 50px;
+    }
+
+    @include bp(md) {
+        padding: 170px 50px 200px 50px;
+    }
+
+    &__title {
+        @include Comfortaa(32, 700, $c-red);
+        text-shadow: 1px 1px 6px #570606;
+
+        @include bp(m) {
+            font-size: 60px;
+        }
+
+        @include bp(l) {
+            font-size: 75px;
+        }
+
+        @include bp(md) {
+            font-size: 100px;
+        }
+    }
+
+    &__description {
+        @include Marck(35, 400, $c-orange);
+        padding-top: 10px;
+        padding-bottom: 60px;
+
+        @include bp(m) {
+            font-size: 50px;
+            padding-top: 15px;
+            padding-bottom: 50px;
+        }
+
+        @include bp(l) {
+            font-size: 65px;
+            padding-top: 20px;
+            padding-bottom: 75px;
+        }
+
+        @include bp(md) {
+            font-size: 75px;
+            padding-top: 25px;
+            padding-bottom: 100px;
+        }
+    }
+
+    &__button {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        @include Comfortaa(14, 600, $c-red);
+        width: 100%;
+        max-width: 150px;
+        height: 40px;
+        border: 2px solid $c-red;
+        text-decoration: none;
+        line-height: 40px;
+        box-sizing: border-box;
+        transition: 0.5s ease-in-out;
+        text-align: center;
+        border-radius: 5px;
+        z-index: 0;
+
+        &:before {
+            right: -50px;
+            border-right: 50px solid transparent;
+            transform: translateX(-100%);
+            transition: 0.5s ease-in-out;
+        }
+
+        &:after {
+            left: -50px;
+            border-left: 50px solid transparent;
+            transform: translateX(100%);
+            transition: 0.5s ease-in-out;
+        }
+
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-bottom: 80px solid $c-red;
+            z-index: -1;
+        }
+
+        &:hover {
+            color: white;
+            text-decoration: none;
+
+            &:before {
+                transform: translateX(-40%);
+            }
+
+            &:after {
+                transform: translateX(40%);
+            }
+        }
+
+        &:before {
+            right: -50px;
+            border-right: 50px solid transparent;
+
+            @include bp(360px) {
+                right: -60px;
+            }
+        }
+
+        &:after {
+            left: -60px;
+            border-left: 50px solid transparent;
+
+            @include bp(m) {
+                left: -50px;
+            }
+        }
+
+        @include bp(m) {
+            font-size: 16px;
+            max-width: 200px;
+            height: 60px;
+            line-height: 60px;
+        }
+
+        @include bp(l) {
+            font-size: 20px;
+            max-width: 250px;
+            height: 80px;
+            line-height: 80px;
+        }
+
+        @include bp(md) {
+            font-size: 25px;
+        }
+    }
+}
+
+
+

@@ -3,9 +3,7 @@
   font-size: 32px;
   font-weight: 600;
   color: #ff9800;
-  padding-bottom: 30px;
-  text-align: center;
-  position: relative; }
+  text-align: center; }
   @media (min-width: 768px) {
     .Team__title, .Statistics__title {
       font-size: 60px; } }
@@ -21,8 +19,6 @@
 
 a {
   text-decoration: none; }
-  a:hover {
-    text-decoration: none; }
 
 h1, h2 {
   margin: 0;
@@ -285,11 +281,12 @@ h1, h2 {
 
 /* section Statistics */
 .Statistics {
-  background-color: #ff9800;
-  background-image: url("../img/bg-mask.png");
-  background-blend-mode: overlay;
-  padding: 30px 0 70px; }
+  background-color: white;
+  background: url(../img/bg-mask.png), linear-gradient(to bottom, #ffffff 0%, #ffba59 47%, #ffb44a 56%, #ffae3b 65%, #ff9800 100%);
+  padding: 0px 0 70px; }
   .Statistics__title {
+    margin-bottom: 30px;
+    margin-top: 120px;
     color: white; }
   .Statistics__content {
     display: flex;
@@ -301,31 +298,31 @@ h1, h2 {
       .Statistics__content {
         justify-content: space-between;
         flex-wrap: nowrap; } }
-    @media (min-width: 360px) {
-      .Statistics__content .Statistics__block {
-        width: 49%; } }
-    .Statistics__content .Statistics__block-number {
-      font-family: "Marck Script", cursive;
-      font-size: 75px;
-      font-weight: 800;
-      color: #bd0713;
-      text-shadow: 1px 2px 2px #CECECE; }
-      @media (min-width: 768px) {
-        .Statistics__content .Statistics__block-number {
-          font-size: 85px; } }
-      @media (min-width: 992px) {
-        .Statistics__content .Statistics__block-number {
-          font-size: 100px; } }
-    .Statistics__content .Statistics__block-text {
-      font-family: "Comfortaa", sans-serif;
-      font-size: 15px;
-      font-weight: 400;
-      color: white; }
-      @media (min-width: 768px) {
-        .Statistics__content .Statistics__block-text {
-          font-size: 18px; } }
-      @media (min-width: 992px) {
-        .Statistics__content .Statistics__block-text {
-          font-size: 20px; } }
+  @media (min-width: 360px) {
+    .Statistics__block {
+      width: 49%; } }
+  .Statistics__block-number {
+    font-family: "Marck Script", cursive;
+    font-size: 75px;
+    font-weight: 800;
+    color: #bd0713;
+    text-shadow: 1px 2px 2px #CECECE; }
+    @media (min-width: 768px) {
+      .Statistics__block-number {
+        font-size: 85px; } }
+    @media (min-width: 992px) {
+      .Statistics__block-number {
+        font-size: 100px; } }
+  .Statistics__block-text {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: white; }
+    @media (min-width: 768px) {
+      .Statistics__block-text {
+        font-size: 18px; } }
+    @media (min-width: 992px) {
+      .Statistics__block-text {
+        font-size: 20px; } }
 
 /*# sourceMappingURL=styles.css.map */

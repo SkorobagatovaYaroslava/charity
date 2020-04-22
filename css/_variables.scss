@@ -50,9 +50,7 @@ $c-orange: #ff9800;
 
 %title {
     @include Comfortaa(32, 600, $c-orange);
-    padding-bottom: 30px;
     text-align: center;
-    position: relative;
 
     @include bp(m) {
         font-size: 60px;

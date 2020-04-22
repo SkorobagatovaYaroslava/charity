@@ -57,10 +57,6 @@ $c-orange: #ff9800;
     }
 
     @include bp(l) {
-        font-size: 75px;
-    }
-
-    @include bp(md) {
-        font-size: 100px;
+        font-size: 70px;
     }
 }

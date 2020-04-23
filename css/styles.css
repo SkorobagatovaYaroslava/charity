@@ -1,20 +1,15 @@
-.Team__title {
+.Team__title, .Statistics__title {
   font-family: "Comfortaa", sans-serif;
   font-size: 32px;
   font-weight: 600;
   color: #ff9800;
-  padding-bottom: 30px;
-  text-align: center;
-  position: relative; }
+  text-align: center; }
   @media (min-width: 768px) {
-    .Team__title {
+    .Team__title, .Statistics__title {
       font-size: 60px; } }
   @media (min-width: 992px) {
-    .Team__title {
-      font-size: 75px; } }
-  @media (min-width: 1200px) {
-    .Team__title {
-      font-size: 100px; } }
+    .Team__title, .Statistics__title {
+      font-size: 70px; } }
 
 * {
   box-sizing: border-box; }
@@ -97,12 +92,6 @@ h1, h2 {
       font-size: 20px;
       font-weight: 600;
       color: #000; }
-      @media (min-width: 768px) {
-        .Header__menu-itemA {
-          font-size: 15px; } }
-      @media (min-width: 1200px) {
-        .Header__menu-itemA {
-          font-size: 20px; } }
       .Header__menu-itemA:hover {
         color: #bd0713; }
         .Header__menu-itemA:hover:after {
@@ -117,8 +106,13 @@ h1, h2 {
         opacity: 0;
         transition: .3s;
         bottom: -8px; }
+      @media (min-width: 768px) {
+        .Header__menu-itemA {
+          font-size: 15px; } }
+      @media (min-width: 1200px) {
+        .Header__menu-itemA {
+          font-size: 20px; } }
 
-/* Top section */
 .Top {
   background-image: url("../img/top_bg.jpg");
   background-size: cover;
@@ -134,12 +128,15 @@ h1, h2 {
   @media (min-width: 1200px) {
     .Top {
       padding: 170px 50px 200px 50px; } }
+  @media (min-width: 1500px) {
+    .Top {
+      background-position: right; } }
   .Top__title {
     font-family: "Comfortaa", sans-serif;
     font-size: 32px;
     font-weight: 700;
     color: #bd0713;
-    text-shadow: 1px 1px 6px #570606; }
+    text-shadow: 1px 1px 6px #493939; }
     @media (min-width: 768px) {
       .Top__title {
         font-size: 60px; } }
@@ -154,6 +151,7 @@ h1, h2 {
     font-size: 35px;
     font-weight: 400;
     color: #ff9800;
+    text-shadow: 1px 0 4px rgba(95, 95, 95, 0.3);
     padding-top: 10px;
     padding-bottom: 60px; }
     @media (min-width: 768px) {
@@ -244,12 +242,14 @@ h1, h2 {
       .Top__button {
         font-size: 25px; } }
 
-/* section Team */
 .Team {
   background: url(../img/team-bg.jpg);
   background-size: cover;
-  padding: 40px 0 20px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   text-align: center; }
+  .Team__title {
+    margin-bottom: 100px; }
   @media (min-width: 360px) {
     .Team__person-photo {
       max-width: 300px;
@@ -257,7 +257,7 @@ h1, h2 {
   @media (min-width: 992px) {
     .Team__person-photo {
       max-width: 400px;
-      padding: 50px 0 70px; } }
+      padding-bottom: 50px; } }
   .Team__person-name {
     font-family: "Marck Script", cursive;
     font-size: 25px;
@@ -282,5 +282,50 @@ h1, h2 {
     color: #ff9800;
     padding: 15px 0 15px;
     text-transform: lowercase; }
+
+.Statistics {
+  background-color: white;
+  background: url(../img/bg-mask.png), linear-gradient(to bottom, #ffffff 0%, #ffba59 47%, #ffb44a 56%, #ffae3b 65%, #ff9800 100%);
+  padding: 70px 0;
+  margin-top: 100px; }
+  .Statistics__title {
+    margin-bottom: 100px;
+    text-shadow: 1px 1px 2px #6e6c6c;
+    color: #fff; }
+  .Statistics__content {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center; }
+    @media (min-width: 768px) {
+      .Statistics__content {
+        justify-content: space-between; } }
+  .Statistics__block {
+    width: 49%; }
+    @media (min-width: 768px) {
+      .Statistics__block {
+        width: 24%; } }
+    .Statistics__block-number {
+      font-family: "Marck Script", cursive;
+      font-size: 75px;
+      font-weight: 800;
+      color: #bd0713;
+      text-shadow: 1px 3px 0 #fff; }
+      @media (min-width: 768px) {
+        .Statistics__block-number {
+          font-size: 85px; } }
+      @media (min-width: 992px) {
+        .Statistics__block-number {
+          font-size: 100px; } }
+    .Statistics__block-text {
+      font-family: "Comfortaa", sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: white; }
+      @media (min-width: 768px) {
+        .Statistics__block-text {
+          font-size: 18px; } }
+      @media (min-width: 992px) {
+        .Statistics__block-text {
+          font-size: 20px; } }
 
 /*# sourceMappingURL=styles.css.map */

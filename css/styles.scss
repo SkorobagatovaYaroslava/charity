@@ -3,7 +3,6 @@
 * {
     box-sizing: border-box;
 }
-
 a {
     text-decoration: none;
 
@@ -103,14 +102,6 @@ h1, h2 {
                 position: relative;
                 @include Marck(20, 600, #000);
 
-                @include bp(m) {
-                    font-size: 15px;
-                }
-
-                @include bp(md) {
-                    font-size: 20px;
-                }
-
                 &:hover {
                     color: $c-red;
 
@@ -130,12 +121,18 @@ h1, h2 {
                     transition: .3s;
                     bottom: -8px;
                 }
+
+                @include bp(m) {
+                    font-size: 15px;
+                }
+
+                @include bp(md) {
+                    font-size: 20px;
+                }
             }
         }
     }
 }
-
-/* Top section */
 
 .Top {
     background-image: url("../img/top_bg.jpg");
@@ -156,9 +153,13 @@ h1, h2 {
         padding: 170px 50px 200px 50px;
     }
 
+    @include bp(1500px) {
+        background-position: right;
+    }
+
     &__title {
         @include Comfortaa(32, 700, $c-red);
-        text-shadow: 1px 1px 6px #570606;
+        text-shadow: 1px 1px 6px #493939;
 
         @include bp(m) {
             font-size: 60px;
@@ -175,6 +176,7 @@ h1, h2 {
 
     &__description {
         @include Marck(35, 400, $c-orange);
+        text-shadow: 1px 0 4px rgba(95, 95, 95, 0.3);
         padding-top: 10px;
         padding-bottom: 60px;
 
@@ -290,16 +292,16 @@ h1, h2 {
     }
 }
 
-/* section Team */
-
 .Team {
     background: url(../img/team-bg.jpg);
     background-size: cover;
-    padding: 40px 0 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     text-align: center;
 
     &__title {
         @extend %title;
+        margin-bottom: 100px;
     }
 
     &__person {
@@ -311,7 +313,7 @@ h1, h2 {
 
             @include bp(l) {
                 max-width: 400px;
-                padding: 50px 0 70px;
+                padding-bottom: 50px;
             }
         }
 
@@ -337,6 +339,63 @@ h1, h2 {
             @include Comfortaa(16, 400, $c-orange);
             padding: 15px 0 15px;
             text-transform: lowercase;
+        }
+    }
+}
+
+.Statistics {
+    background-color: rgba(255,255,255,1);
+    background: url(../img/bg-mask.png), linear-gradient(to bottom, #ffffff 0%, rgba(255,186,89,1) 47%, rgba(255,180,74,1) 56%, rgba(255,174,59,1) 65%, rgba(255,152,0,1) 100%);
+    padding: 70px 0;
+    margin-top: 100px;
+
+    &__title {
+        @extend %title;
+        margin-bottom: 100px;
+        text-shadow: 1px 1px 2px #6e6c6c;
+        color: #fff;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+
+        @include bp(m) {
+            justify-content: space-between;
+        }
+    }
+
+    &__block {
+        width: 49%;
+
+        @include bp(m) {
+            width: 24%;
+        }
+
+        &-number {
+            @include Marck(75, 800, $c-red);
+            text-shadow: 1px 3px 0 #fff;
+
+            @include bp(m) {
+                font-size: 85px;
+            }
+
+            @include bp(l) {
+                font-size: 100px;
+            }
+        }
+
+        &-text {
+            @include Comfortaa(15, 400, white);
+
+            @include bp(m) {
+                font-size: 18px;
+            }
+
+            @include bp(l) {
+                font-size: 20px;
+            }
         }
     }
 }

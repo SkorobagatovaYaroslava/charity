@@ -1,18 +1,19 @@
-.Team__title, .Statistics__title {
+.Team__title, .Statistics__title, .contacts__title {
   font-family: "Comfortaa", sans-serif;
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 600;
-  color: #ff9800;
+  color: #bd0713;
   text-align: center; }
   @media (min-width: 768px) {
-    .Team__title, .Statistics__title {
-      font-size: 60px; } }
+    .Team__title, .Statistics__title, .contacts__title {
+      font-size: 40px; } }
   @media (min-width: 992px) {
-    .Team__title, .Statistics__title {
-      font-size: 70px; } }
+    .Team__title, .Statistics__title, .contacts__title {
+      font-size: 50px; } }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline: none; }
 
 a {
   text-decoration: none; }
@@ -133,22 +134,22 @@ h1, h2 {
       background-position: right; } }
   .Top__title {
     font-family: "Comfortaa", sans-serif;
-    font-size: 32px;
+    font-size: 25px;
     font-weight: 700;
     color: #bd0713;
     text-shadow: 1px 1px 6px #493939; }
     @media (min-width: 768px) {
       .Top__title {
-        font-size: 60px; } }
+        font-size: 30px; } }
     @media (min-width: 992px) {
       .Top__title {
-        font-size: 75px; } }
+        font-size: 40px; } }
     @media (min-width: 1200px) {
       .Top__title {
-        font-size: 100px; } }
+        font-size: 50px; } }
   .Top__description {
     font-family: "Marck Script", cursive;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 400;
     color: #ff9800;
     text-shadow: 1px 0 4px rgba(95, 95, 95, 0.3);
@@ -156,17 +157,17 @@ h1, h2 {
     padding-bottom: 60px; }
     @media (min-width: 768px) {
       .Top__description {
-        font-size: 50px;
+        font-size: 30px;
         padding-top: 15px;
         padding-bottom: 50px; } }
     @media (min-width: 992px) {
       .Top__description {
-        font-size: 65px;
+        font-size: 40px;
         padding-top: 20px;
         padding-bottom: 75px; } }
     @media (min-width: 1200px) {
       .Top__description {
-        font-size: 75px;
+        font-size: 50px;
         padding-top: 25px;
         padding-bottom: 100px; } }
   .Top__button {
@@ -327,5 +328,111 @@ h1, h2 {
       @media (min-width: 992px) {
         .Statistics__block-text {
           font-size: 20px; } }
+
+.contacts {
+  background: url(../img/bg_contacts.jpg);
+  padding: 65px 0;
+  background-size: cover; }
+  @media (min-width: 768px) {
+    .contacts {
+      padding: 100px 0; } }
+  .contacts__title {
+    margin-bottom: 65px; }
+    @media (min-width: 768px) {
+      .contacts__title {
+        margin-bottom: 100px; } }
+  .contacts__form {
+    position: relative; }
+    .contacts__form-input {
+      padding: 15px 130px 15px 25px;
+      margin-bottom: 20px;
+      border: 2px solid #9e9e9e59;
+      border-radius: 10px; }
+      @media (min-width: 768px) {
+        .contacts__form-input {
+          padding: 15px 320px 15px 25px; } }
+      .contacts__form-input:focus ~ .contacts__form-label, .contacts__form-input:not(:focus):invalid ~ .contacts__form-label {
+        font-family: "Comfortaa", sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        color: #000;
+        top: -35px; }
+    .contacts__form-label {
+      font-family: "Comfortaa", sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: #000;
+      position: absolute;
+      left: 15px;
+      top: 0;
+      pointer-events: none;
+      line-height: 55px;
+      transition: .3s; }
+      @media (min-width: 768px) {
+        .contacts__form-label {
+          font-size: 15px; } }
+    .contacts__form-message {
+      padding: 15px 152px 65px 25px;
+      margin-bottom: 20px;
+      border: 2px solid #9e9e9e59;
+      border-radius: 10px;
+      resize: none; }
+      @media (min-width: 768px) {
+        .contacts__form-message {
+          padding: 15px 335px 90px 25px; } }
+      .contacts__form-message:focus ~ .contacts__form-label, .contacts__form-message:not(:focus):invalid ~ .contacts__form-label {
+        font-family: "Comfortaa", sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        color: #000;
+        top: -35px; }
+    .contacts__form-button {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      font-family: "Comfortaa", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #bd0713;
+      width: 100%;
+      max-width: 150px;
+      height: 40px;
+      border: 2px solid #bd0713;
+      text-decoration: none;
+      line-height: 40px;
+      transition: 0.5s ease-in-out;
+      text-align: center;
+      border-radius: 5px;
+      z-index: 0; }
+      .contacts__form-button .button__aware {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background-color: #bd0713;
+        transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+        transform: translate(-50%, -50%);
+        z-index: -1; }
+      .contacts__form-button:hover {
+        color: #fff;
+        text-decoration: none; }
+        .contacts__form-button:hover .button__aware {
+          width: 225%;
+          height: 562.5px; }
+      @media (min-width: 768px) {
+        .contacts__form-button {
+          font-size: 16px;
+          max-width: 200px;
+          height: 60px;
+          line-height: 60px; } }
+      @media (min-width: 992px) {
+        .contacts__form-button {
+          font-size: 20px;
+          max-width: 250px;
+          height: 80px; } }
+      @media (min-width: 1200px) {
+        .contacts__form-button {
+          font-size: 25px; } }
 
 /*# sourceMappingURL=styles.css.map */

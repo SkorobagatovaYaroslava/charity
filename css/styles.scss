@@ -135,7 +135,7 @@ h1, h2 {
 }
 
 .Top {
-    background-image: url("../img/top_bg.jpg");
+    background-image: url("../img/bg-top.jpg");
     background-size: cover;
     padding: 85px 25px 65px 25px;
     background-position: center center;
@@ -293,7 +293,7 @@ h1, h2 {
 }
 
 .Team {
-    background: url(../img/team-bg.jpg);
+    background: url(../img/bg-team.jpg);
     background-size: cover;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -302,6 +302,7 @@ h1, h2 {
     &__title {
         @extend %title;
         margin-bottom: 100px;
+        text-shadow: 1px 1px 8px #beb1b2;
     }
 
     &__person {
@@ -346,13 +347,13 @@ h1, h2 {
 .Statistics {
     background-color: rgba(255,255,255,1);
     background: url(../img/bg-mask.png), linear-gradient(to bottom, #ffffff 0%, rgba(255,186,89,1) 47%, rgba(255,180,74,1) 56%, rgba(255,174,59,1) 65%, rgba(255,152,0,1) 100%);
-    padding: 70px 0;
-    margin-top: 100px;
+    padding: 70px 0 100px;
+    margin-top: 50px;
 
     &__title {
         @extend %title;
         margin-bottom: 100px;
-        text-shadow: 1px 1px 2px #6e6c6c;
+        text-shadow: 1px 1px 8px #ba7c20;
         color: #fff;
     }
 
@@ -375,7 +376,7 @@ h1, h2 {
 
         &-number {
             @include Marck(75, 800, $c-red);
-            text-shadow: 1px 3px 0 #fff;
+            text-shadow: 1px 3px 3px #fff;
 
             @include bp(m) {
                 font-size: 85px;
@@ -388,6 +389,7 @@ h1, h2 {
 
         &-text {
             @include Comfortaa(15, 400, white);
+            text-shadow: 1px 0 11px #9f6105;
 
             @include bp(m) {
                 font-size: 18px;

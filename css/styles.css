@@ -1,14 +1,13 @@
-.Team__title, .Statistics__title, .contacts__title {
+.Team__title, .Statistics__title, .Contacts__title {
   font-family: "Comfortaa", sans-serif;
   font-size: 25px;
   font-weight: 600;
-  color: #bd0713;
-  text-align: center; }
+  color: #bd0713; }
   @media (min-width: 768px) {
-    .Team__title, .Statistics__title, .contacts__title {
+    .Team__title, .Statistics__title, .Contacts__title {
       font-size: 40px; } }
   @media (min-width: 992px) {
-    .Team__title, .Statistics__title, .contacts__title {
+    .Team__title, .Statistics__title, .Contacts__title {
       font-size: 50px; } }
 
 * {
@@ -134,22 +133,22 @@ h1, h2 {
       background-position: right; } }
   .Top__title {
     font-family: "Comfortaa", sans-serif;
-    font-size: 25px;
+    font-size: 35px;
     font-weight: 700;
     color: #bd0713;
     text-shadow: 1px 1px 6px #493939; }
     @media (min-width: 768px) {
       .Top__title {
-        font-size: 30px; } }
+        font-size: 60px; } }
     @media (min-width: 992px) {
       .Top__title {
-        font-size: 40px; } }
+        font-size: 75px; } }
     @media (min-width: 1200px) {
       .Top__title {
-        font-size: 50px; } }
+        font-size: 100px; } }
   .Top__description {
     font-family: "Marck Script", cursive;
-    font-size: 25px;
+    font-size: 35px;
     font-weight: 400;
     color: #ff9800;
     text-shadow: 1px 0 4px rgba(95, 95, 95, 0.3);
@@ -157,17 +156,17 @@ h1, h2 {
     padding-bottom: 60px; }
     @media (min-width: 768px) {
       .Top__description {
-        font-size: 30px;
+        font-size: 60px;
         padding-top: 15px;
         padding-bottom: 50px; } }
     @media (min-width: 992px) {
       .Top__description {
-        font-size: 40px;
+        font-size: 75px;
         padding-top: 20px;
         padding-bottom: 75px; } }
     @media (min-width: 1200px) {
       .Top__description {
-        font-size: 50px;
+        font-size: 100px;
         padding-top: 25px;
         padding-bottom: 100px; } }
   .Top__button {
@@ -244,13 +243,14 @@ h1, h2 {
         font-size: 25px; } }
 
 .Team {
-  background: url(../img/team-bg.jpg);
+  background: url("../img/team-bg.jpg");
   background-size: cover;
   padding-top: 100px;
   padding-bottom: 100px;
   text-align: center; }
   .Team__title {
-    margin-bottom: 100px; }
+    margin-bottom: 100px;
+    text-align: center; }
   @media (min-width: 360px) {
     .Team__person-photo {
       max-width: 300px;
@@ -286,13 +286,14 @@ h1, h2 {
 
 .Statistics {
   background-color: white;
-  background: url(../img/bg-mask.png), linear-gradient(to bottom, #ffffff 0%, #ffba59 47%, #ffb44a 56%, #ffae3b 65%, #ff9800 100%);
+  background: url("../img/bg-mask.png"), linear-gradient(to bottom, #ffffff 0%, #ffba59 47%, #ffb44a 56%, #ffae3b 65%, #ff9800 100%);
   padding: 70px 0;
   margin-top: 100px; }
   .Statistics__title {
     margin-bottom: 100px;
     text-shadow: 1px 1px 2px #6e6c6c;
-    color: #fff; }
+    color: #fff;
+    text-align: center; }
   .Statistics__content {
     display: flex;
     flex-wrap: wrap;
@@ -329,64 +330,78 @@ h1, h2 {
         .Statistics__block-text {
           font-size: 20px; } }
 
-.contacts {
-  background: url(../img/bg_contacts.jpg);
+.Contacts {
+  background: url("../img/bg_contacts.jpg");
   padding: 65px 0;
-  background-size: cover; }
+  background-size: cover;
+  background-position: center; }
   @media (min-width: 768px) {
-    .contacts {
+    .Contacts {
       padding: 100px 0; } }
-  .contacts__title {
-    margin-bottom: 65px; }
+  .Contacts__title {
+    margin-bottom: 65px;
+    text-align: left; }
     @media (min-width: 768px) {
-      .contacts__title {
+      .Contacts__title {
         margin-bottom: 100px; } }
-  .contacts__form {
+  .Contacts__form {
+    max-width: 520px; }
+  .Contacts__row {
     position: relative; }
-    .contacts__form-input {
-      padding: 15px 130px 15px 25px;
+    .Contacts__row-input {
+      padding: 15px 20px 15px;
       margin-bottom: 20px;
-      border: 2px solid #9e9e9e59;
-      border-radius: 10px; }
-      @media (min-width: 768px) {
-        .contacts__form-input {
-          padding: 15px 320px 15px 25px; } }
-      .contacts__form-input:focus ~ .contacts__form-label, .contacts__form-input:not(:focus):invalid ~ .contacts__form-label {
-        font-family: "Comfortaa", sans-serif;
-        font-size: 10px;
-        font-weight: 400;
-        color: #000;
-        top: -35px; }
-    .contacts__form-label {
+      border: 1px solid #e4e4e4;
+      border-radius: 5px;
+      width: 100%;
       font-family: "Comfortaa", sans-serif;
       font-size: 12px;
       font-weight: 400;
-      color: #000;
+      color: #000; }
+      .Contacts__row-input:focus {
+        outline: none;
+        border-color: #000011; }
+      .Contacts__row-input:focus + .Contacts__row-label {
+        font-size: 12px;
+        top: -8px; }
+      .Contacts__row-input.active + .Contacts__row-label {
+        font-size: 12px;
+        top: -8px; }
+    .Contacts__row-label {
+      font-family: "Comfortaa", sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: #505D68;
       position: absolute;
       left: 15px;
-      top: 0;
-      pointer-events: none;
-      line-height: 55px;
-      transition: .3s; }
+      top: 15px;
+      transition: .3s;
+      background: #fff; }
       @media (min-width: 768px) {
-        .contacts__form-label {
+        .Contacts__row-label {
           font-size: 15px; } }
-    .contacts__form-message {
-      padding: 15px 152px 65px 25px;
+    .Contacts__row-message {
+      width: 100%;
+      height: 120px;
+      padding: 15px;
       margin-bottom: 20px;
-      border: 2px solid #9e9e9e59;
-      border-radius: 10px;
-      resize: none; }
-      @media (min-width: 768px) {
-        .contacts__form-message {
-          padding: 15px 335px 90px 25px; } }
-      .contacts__form-message:focus ~ .contacts__form-label, .contacts__form-message:not(:focus):invalid ~ .contacts__form-label {
-        font-family: "Comfortaa", sans-serif;
-        font-size: 10px;
-        font-weight: 400;
-        color: #000;
-        top: -35px; }
-    .contacts__form-button {
+      border: 1px solid #e4e4e4;
+      border-radius: 5px;
+      resize: none;
+      font-family: "Comfortaa", sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: #000; }
+      .Contacts__row-message:focus {
+        outline: none;
+        border-color: #000011; }
+      .Contacts__row-message:focus + .Contacts__row-label {
+        font-size: 12px;
+        top: -8px; }
+      .Contacts__row-message.active + .Contacts__row-label {
+        font-size: 12px;
+        top: -8px; }
+    .Contacts__row-button {
       position: relative;
       display: block;
       overflow: hidden;
@@ -399,12 +414,12 @@ h1, h2 {
       height: 40px;
       border: 2px solid #bd0713;
       text-decoration: none;
-      line-height: 40px;
       transition: 0.5s ease-in-out;
       text-align: center;
       border-radius: 5px;
-      z-index: 0; }
-      .contacts__form-button .button__aware {
+      z-index: 0;
+      background: #fff; }
+      .Contacts__row-button .button__aware {
         position: absolute;
         display: block;
         width: 0;
@@ -414,25 +429,22 @@ h1, h2 {
         transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
         transform: translate(-50%, -50%);
         z-index: -1; }
-      .contacts__form-button:hover {
+      .Contacts__row-button:hover {
         color: #fff;
         text-decoration: none; }
-        .contacts__form-button:hover .button__aware {
+        .Contacts__row-button:hover .button__aware {
           width: 225%;
           height: 562.5px; }
       @media (min-width: 768px) {
-        .contacts__form-button {
-          font-size: 16px;
+        .Contacts__row-button {
+          font-size: 14px;
           max-width: 200px;
-          height: 60px;
-          line-height: 60px; } }
+          height: 50px; } }
       @media (min-width: 992px) {
-        .contacts__form-button {
-          font-size: 20px;
-          max-width: 250px;
-          height: 80px; } }
+        .Contacts__row-button {
+          font-size: 16px; } }
       @media (min-width: 1200px) {
-        .contacts__form-button {
-          font-size: 25px; } }
+        .Contacts__row-button {
+          font-size: 18px; } }
 
 /*# sourceMappingURL=styles.css.map */

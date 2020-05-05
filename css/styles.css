@@ -335,7 +335,8 @@ h1, h2 {
 .Help {
   padding: 60px 0; }
   .Help__title {
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 100px; }
   .Help__content {
     display: flex;
     flex-wrap: wrap;
@@ -349,7 +350,8 @@ h1, h2 {
       .Help__block {
         width: 24%; } }
     .Help__block-img {
-      height: 300px; }
+      width: 100%;
+      max-width: 274px; }
     .Help__block-text {
       font-family: "Comfortaa", sans-serif;
       font-size: 15px;

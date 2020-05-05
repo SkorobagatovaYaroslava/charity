@@ -410,6 +410,7 @@ h1, h2 {
 
     &__title {
         @extend %title;
+        text-align: center;
     }
 
     &__content {

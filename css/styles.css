@@ -1,13 +1,13 @@
-.Team__title, .Statistics__title, .Contacts__title {
+.Team__title, .Statistics__title, .Help__title, .Contacts__title {
   font-family: "Comfortaa", sans-serif;
   font-size: 25px;
   font-weight: 600;
   color: #bd0713; }
   @media (min-width: 768px) {
-    .Team__title, .Statistics__title, .Contacts__title {
+    .Team__title, .Statistics__title, .Help__title, .Contacts__title {
       font-size: 40px; } }
   @media (min-width: 992px) {
-    .Team__title, .Statistics__title, .Contacts__title {
+    .Team__title, .Statistics__title, .Help__title, .Contacts__title {
       font-size: 50px; } }
 
 * {
@@ -331,6 +331,40 @@ h1, h2 {
       @media (min-width: 992px) {
         .Statistics__block-text {
           font-size: 20px; } }
+
+.Help {
+  padding: 60px 0; }
+  .Help__title {
+    text-align: center; }
+  .Help__content {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center; }
+    @media (min-width: 768px) {
+      .Help__content {
+        justify-content: space-between; } }
+  .Help__block {
+    width: 49%; }
+    @media (min-width: 768px) {
+      .Help__block {
+        width: 24%; } }
+    .Help__block-img {
+      height: 300px; }
+    .Help__block-text {
+      font-family: "Comfortaa", sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: #000; }
+      @media (min-width: 768px) {
+        .Help__block-text {
+          font-size: 18px; } }
+      @media (min-width: 992px) {
+        .Help__block-text {
+          font-size: 20px; } }
+  .Help .blok-1 {
+    width: 33%; }
+  .Help .block-2 {
+    width: 49%; }
 
 .Contacts {
   background: url("../img/bg_contacts.jpg");

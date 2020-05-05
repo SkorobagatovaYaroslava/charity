@@ -114,7 +114,7 @@ h1, h2 {
           font-size: 20px; } }
 
 .Top {
-  background-image: url("../img/top_bg.jpg");
+  background-image: url("../img/bg-top.jpg");
   background-size: cover;
   padding: 85px 25px 65px 25px;
   background-position: center center; }
@@ -243,14 +243,15 @@ h1, h2 {
         font-size: 25px; } }
 
 .Team {
-  background: url("../img/team-bg.jpg");
+  background: url(../img/bg-team.jpg);
   background-size: cover;
   padding-top: 100px;
   padding-bottom: 100px;
   text-align: center; }
   .Team__title {
     margin-bottom: 100px;
-    text-align: center; }
+    text-align: center;
+    text-shadow: 1px 1px 8px #beb1b2; }
   @media (min-width: 360px) {
     .Team__person-photo {
       max-width: 300px;
@@ -291,7 +292,7 @@ h1, h2 {
   margin-top: 100px; }
   .Statistics__title {
     margin-bottom: 100px;
-    text-shadow: 1px 1px 2px #6e6c6c;
+    text-shadow: 1px 1px 8px #ba7c20;
     color: #fff;
     text-align: center; }
   .Statistics__content {
@@ -311,7 +312,7 @@ h1, h2 {
       font-size: 75px;
       font-weight: 800;
       color: #bd0713;
-      text-shadow: 1px 3px 0 #fff; }
+      text-shadow: 1px 3px 3px #fff; }
       @media (min-width: 768px) {
         .Statistics__block-number {
           font-size: 85px; } }
@@ -322,7 +323,8 @@ h1, h2 {
       font-family: "Comfortaa", sans-serif;
       font-size: 15px;
       font-weight: 400;
-      color: white; }
+      color: white;
+      text-shadow: 1px 0 11px #9f6105; }
       @media (min-width: 768px) {
         .Statistics__block-text {
           font-size: 18px; } }

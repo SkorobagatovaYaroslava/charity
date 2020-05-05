@@ -49,14 +49,13 @@ $c-orange: #ff9800;
 }
 
 %title {
-    @include Comfortaa(32, 600, $c-orange);
-    text-align: center;
+    @include Comfortaa(25, 600, $c-red);
 
     @include bp(m) {
-        font-size: 60px;
+        font-size: 40px;
     }
 
     @include bp(l) {
-        font-size: 70px;
+        font-size: 50px;
     }
 }

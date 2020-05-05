@@ -1,18 +1,18 @@
-.Team__title, .Statistics__title, .Help__title {
+.Team__title, .Statistics__title, .Contacts__title {
   font-family: "Comfortaa", sans-serif;
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 600;
-  color: #ff9800;
-  text-align: center; }
+  color: #bd0713; }
   @media (min-width: 768px) {
-    .Team__title, .Statistics__title, .Help__title {
-      font-size: 60px; } }
+    .Team__title, .Statistics__title, .Contacts__title {
+      font-size: 40px; } }
   @media (min-width: 992px) {
-    .Team__title, .Statistics__title, .Help__title {
-      font-size: 70px; } }
+    .Team__title, .Statistics__title, .Contacts__title {
+      font-size: 50px; } }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline: none; }
 
 a {
   text-decoration: none; }
@@ -114,7 +114,7 @@ h1, h2 {
           font-size: 20px; } }
 
 .Top {
-  background-image: url("../img/top_bg.jpg");
+  background-image: url("../img/bg-top.jpg");
   background-size: cover;
   padding: 85px 25px 65px 25px;
   background-position: center center; }
@@ -133,7 +133,7 @@ h1, h2 {
       background-position: right; } }
   .Top__title {
     font-family: "Comfortaa", sans-serif;
-    font-size: 32px;
+    font-size: 35px;
     font-weight: 700;
     color: #bd0713;
     text-shadow: 1px 1px 6px #493939; }
@@ -156,17 +156,17 @@ h1, h2 {
     padding-bottom: 60px; }
     @media (min-width: 768px) {
       .Top__description {
-        font-size: 50px;
+        font-size: 60px;
         padding-top: 15px;
         padding-bottom: 50px; } }
     @media (min-width: 992px) {
       .Top__description {
-        font-size: 65px;
+        font-size: 75px;
         padding-top: 20px;
         padding-bottom: 75px; } }
     @media (min-width: 1200px) {
       .Top__description {
-        font-size: 75px;
+        font-size: 100px;
         padding-top: 25px;
         padding-bottom: 100px; } }
   .Top__button {
@@ -243,13 +243,15 @@ h1, h2 {
         font-size: 25px; } }
 
 .Team {
-  background: url(../img/team-bg.jpg);
+  background: url(../img/bg-team.jpg);
   background-size: cover;
   padding-top: 100px;
   padding-bottom: 100px;
   text-align: center; }
   .Team__title {
-    margin-bottom: 100px; }
+    margin-bottom: 100px;
+    text-align: center;
+    text-shadow: 1px 1px 8px #beb1b2; }
   @media (min-width: 360px) {
     .Team__person-photo {
       max-width: 300px;
@@ -285,13 +287,14 @@ h1, h2 {
 
 .Statistics {
   background-color: white;
-  background: url(../img/bg-mask.png), linear-gradient(to bottom, #ffffff 0%, #ffba59 47%, #ffb44a 56%, #ffae3b 65%, #ff9800 100%);
+  background: url("../img/bg-mask.png"), linear-gradient(to bottom, #ffffff 0%, #ffba59 47%, #ffb44a 56%, #ffae3b 65%, #ff9800 100%);
   padding: 70px 0;
   margin-top: 100px; }
   .Statistics__title {
     margin-bottom: 100px;
-    text-shadow: 1px 1px 2px #6e6c6c;
-    color: #fff; }
+    text-shadow: 1px 1px 8px #ba7c20;
+    color: #fff;
+    text-align: center; }
   .Statistics__content {
     display: flex;
     flex-wrap: wrap;
@@ -309,7 +312,7 @@ h1, h2 {
       font-size: 75px;
       font-weight: 800;
       color: #bd0713;
-      text-shadow: 1px 3px 0 #fff; }
+      text-shadow: 1px 3px 3px #fff; }
       @media (min-width: 768px) {
         .Statistics__block-number {
           font-size: 85px; } }
@@ -320,7 +323,8 @@ h1, h2 {
       font-family: "Comfortaa", sans-serif;
       font-size: 15px;
       font-weight: 400;
-      color: white; }
+      color: white;
+      text-shadow: 1px 0 11px #9f6105; }
       @media (min-width: 768px) {
         .Statistics__block-text {
           font-size: 18px; } }
@@ -328,36 +332,121 @@ h1, h2 {
         .Statistics__block-text {
           font-size: 20px; } }
 
-.Help {
-  padding: 60px 0; }
-  .Help__content {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center; }
+.Contacts {
+  background: url("../img/bg_contacts.jpg");
+  padding: 65px 0;
+  background-size: cover;
+  background-position: center; }
+  @media (min-width: 768px) {
+    .Contacts {
+      padding: 100px 0; } }
+  .Contacts__title {
+    margin-bottom: 65px;
+    text-align: left; }
     @media (min-width: 768px) {
-      .Help__content {
-        justify-content: space-between; } }
-  .Help__block {
-    width: 49%; }
-    @media (min-width: 768px) {
-      .Help__block {
-        width: 24%; } }
-    .Help__block-img {
-      height: 300px; }
-    .Help__block-text {
+      .Contacts__title {
+        margin-bottom: 100px; } }
+  .Contacts__form {
+    max-width: 520px; }
+  .Contacts__row {
+    position: relative; }
+    .Contacts__row-input {
+      padding: 15px 20px 15px;
+      margin-bottom: 20px;
+      border: 1px solid #e4e4e4;
+      border-radius: 5px;
+      width: 100%;
       font-family: "Comfortaa", sans-serif;
-      font-size: 15px;
+      font-size: 12px;
       font-weight: 400;
       color: #000; }
+      .Contacts__row-input:focus {
+        outline: none;
+        border-color: #000011; }
+      .Contacts__row-input:focus + .Contacts__row-label {
+        font-size: 12px;
+        top: -8px; }
+      .Contacts__row-input.active + .Contacts__row-label {
+        font-size: 12px;
+        top: -8px; }
+    .Contacts__row-label {
+      font-family: "Comfortaa", sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: #505D68;
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      transition: .3s;
+      background: #fff; }
       @media (min-width: 768px) {
-        .Help__block-text {
-          font-size: 18px; } }
+        .Contacts__row-label {
+          font-size: 15px; } }
+    .Contacts__row-message {
+      width: 100%;
+      height: 120px;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #e4e4e4;
+      border-radius: 5px;
+      resize: none;
+      font-family: "Comfortaa", sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: #000; }
+      .Contacts__row-message:focus {
+        outline: none;
+        border-color: #000011; }
+      .Contacts__row-message:focus + .Contacts__row-label {
+        font-size: 12px;
+        top: -8px; }
+      .Contacts__row-message.active + .Contacts__row-label {
+        font-size: 12px;
+        top: -8px; }
+    .Contacts__row-button {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      font-family: "Comfortaa", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #bd0713;
+      width: 100%;
+      max-width: 150px;
+      height: 40px;
+      border: 2px solid #bd0713;
+      text-decoration: none;
+      transition: 0.5s ease-in-out;
+      text-align: center;
+      border-radius: 5px;
+      z-index: 0;
+      background: #fff; }
+      .Contacts__row-button .button__aware {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background-color: #bd0713;
+        transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+        transform: translate(-50%, -50%);
+        z-index: -1; }
+      .Contacts__row-button:hover {
+        color: #fff;
+        text-decoration: none; }
+        .Contacts__row-button:hover .button__aware {
+          width: 225%;
+          height: 562.5px; }
+      @media (min-width: 768px) {
+        .Contacts__row-button {
+          font-size: 14px;
+          max-width: 200px;
+          height: 50px; } }
       @media (min-width: 992px) {
-        .Help__block-text {
-          font-size: 20px; } }
-  .Help .blok-1 {
-    width: 33%; }
-  .Help .block-2 {
-    width: 49%; }
+        .Contacts__row-button {
+          font-size: 16px; } }
+      @media (min-width: 1200px) {
+        .Contacts__row-button {
+          font-size: 18px; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -405,6 +405,59 @@ h1, h2 {
     }
 }
 
+.Help {
+    padding: 60px 0;
+
+    &__title {
+        @extend %title;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+
+        @include bp(m) {
+            justify-content: space-between;
+        }
+    }
+
+    &__block {
+        width: 49%;
+
+        @include bp(m) {
+            width: 24%;
+        }
+
+        &-img {
+            width: 100%;
+            max-width: 274px;
+        }
+
+        &-text {
+            @include Comfortaa(15, 400, #000);
+
+            @include bp(m) {
+                font-size: 18px;
+            }
+
+            @include bp(l) {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .blok-1 {
+        width: 33%;
+    }
+
+    .block-2 {
+        width: 49%;
+    }
+}
+
 .Contacts {
     background: url("../img/bg_contacts.jpg");
     padding: 65px 0;

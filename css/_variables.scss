@@ -1,5 +1,7 @@
 $c-red: #bd0713;
 $c-orange: #ff9800;
+$c-main-text: #610000;
+$c-label: #9b6b6b; //#a78a8a
 
 @mixin Comfortaa($size, $weight, $color) {
     font: {
@@ -50,6 +52,7 @@ $c-orange: #ff9800;
 
 %title {
     @include Comfortaa(25, 600, $c-red);
+    text-shadow: 1px 1px 8px #dbd2d3;
 
     @include bp(m) {
         font-size: 40px;

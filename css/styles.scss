@@ -304,7 +304,6 @@ h1, h2 {
         @extend %title;
         margin-bottom: 100px;
         text-align: center;
-        text-shadow: 1px 1px 8px #beb1b2;
     }
 
     &__person {
@@ -379,7 +378,7 @@ h1, h2 {
 
         &-number {
             @include Marck(75, 800, $c-red);
-            text-shadow: 1px 3px 3px #fff;
+            text-shadow: 1px 3px 3px rgba(255, 255, 255, .5);
 
             @include bp(m) {
                 font-size: 85px;
@@ -432,29 +431,66 @@ h1, h2 {
         }
 
         &-img {
-            width: 100%;
-            max-width: 274px;
+            width: 274px;
+
+            &:hover {
+                animation: 1.2s ease-in-out 0s normal none infinite running shake;
+            }
+
+            &.tiny {
+                width: 220px;
+
+                &:hover {
+                    animation: 1.5s ease-in-out 0s normal none infinite running slow-shake;
+                }
+            }
+
+            &.small {
+                width: 225px;
+
+                &:hover {
+                    animation: 1.5s ease-in-out 0s normal none infinite running slow-shake;
+                }
+            }
+
+            &.middle {
+                width: 250px;
+
+                &:hover {
+                    animation: 1.7s ease-in-out 0s normal none infinite running big-shake;
+                }
+            }
+
+            &.big {
+                width: 290px;
+            }
         }
 
         &-text {
-            @include Comfortaa(15, 400, #000);
+            @include Comfortaa(15, 600, $c-main-text);
+
+
+            &Hint {
+                @include Comfortaa(13, 400, $c-label);
+            }
 
             @include bp(m) {
                 font-size: 18px;
             }
 
             @include bp(l) {
-                font-size: 20px;
+                line-height: 30px;
+                margin-top: 10px;
             }
         }
-    }
 
-    .blok-1 {
-        width: 33%;
-    }
+        &.block-1 {
+            margin-bottom: 60px;
+        }
 
-    .block-2 {
-        width: 49%;
+        &.block-2 {
+            width: 49%;
+        }
     }
 }
 
@@ -600,5 +636,42 @@ h1, h2 {
                 font-size: 18px;
             }
         }
+    }
+}
+
+
+@keyframes shake {
+    0%, 50%, 100% {
+        transform: rotate(0deg) scale(1);
+    }
+    10%, 30% {
+        transform: rotate(-5deg) scale(1.05);
+    }
+    20%, 40% {
+        transform: rotate(5deg) scale(0.95);
+    }
+}
+
+@keyframes slow-shake {
+    0%, 65%, 100% {
+        transform: rotate(0deg) scale(1);
+    }
+    10%, 35% {
+        transform: rotate(3deg) scale(0.97);
+    }
+    25%, 45% {
+        transform: rotate(-8deg) scale(1.04);
+    }
+}
+
+@keyframes big-shake {
+    0%, 60%, 100% {
+        transform: rotate(0deg) scale(1);
+    }
+    15%, 40% {
+        transform: rotate(10deg) scale(0.9);
+    }
+    30%, 50% {
+        transform: rotate(-8deg) scale(1.001);
     }
 }

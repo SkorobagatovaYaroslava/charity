@@ -597,7 +597,7 @@ h1, h2 {
     padding: 65px 0;
 
     @include bp(m) {
-        padding: 100px 0;
+        padding: 100px 0 30px;
         background-image: url("../img/bg-contacts.jpg");
         background-size: cover;
         background-position: center;

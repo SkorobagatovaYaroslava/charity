@@ -1,7 +1,8 @@
 $c-red: #bd0713;
 $c-orange: #ff9800;
 $c-main-text: #610000;
-$c-label: #9b6b6b; //#a78a8a
+$c-label: #9b7a7a; //#a78a8a
+$c-text: #594042;
 
 @mixin Comfortaa($size, $weight, $color) {
     font: {
@@ -51,7 +52,7 @@ $c-label: #9b6b6b; //#a78a8a
 }
 
 %title {
-    @include Comfortaa(25, 600, $c-red);
+    @include Comfortaa(25, 600, #594042);
     text-shadow: 1px 1px 8px #dbd2d3;
 
     @include bp(m) {
@@ -59,6 +60,6 @@ $c-label: #9b6b6b; //#a78a8a
     }
 
     @include bp(l) {
-        font-size: 50px;
+        font-size: 40px;
     }
 }

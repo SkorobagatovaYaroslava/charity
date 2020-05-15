@@ -293,14 +293,15 @@ h1, h2 {
     }
 }
 
-.AboutAs {
-    background-image: url("../img/bg-AboutAs.jpg");
+.About {
+    background-image: url("../img/bg-about.jpg");
     background-size: cover;
     padding: 70px 0;
+    margin-top: 50px;
     text-align: center;
 
     @include bp(md) {
-        padding: 100px 0;
+        padding: 80px 0 100px;
     }
 
     &__title {
@@ -308,7 +309,9 @@ h1, h2 {
         margin-bottom: 50px;
 
         @include bp(md) {
-            margin-bottom: 130px;
+            position: relative;
+            top: -54px;
+            margin-bottom: 150px;
         }
     }
 
@@ -336,7 +339,8 @@ h1, h2 {
         }
 
         &-text {
-            @include Comfortaa(15, 600, $c-label);
+            @include Comfortaa(15, 600, $c-text);
+            line-height: 20px;
         }
 
         &.first {
@@ -433,7 +437,7 @@ h1, h2 {
         }
 
         &-position {
-            @include Comfortaa(16, 400, $c-orange);
+            @include Comfortaa(16, 400, $c-text);
             padding: 15px 0 15px;
             text-transform: lowercase;
         }
@@ -443,20 +447,20 @@ h1, h2 {
 .Statistics {
     background-color: rgba(255,255,255,1);
     background: url(../img/bg-mask.png), linear-gradient(to bottom, #ffffff 0%, #fedebb 47%, #fff 100%);
-    padding: 70px 0;
+    padding-bottom: 100px;
     margin-top: 100px;
 
     &__title {
         @extend %title;
         margin-bottom: 100px;
-        color: $c-red;
-        text-shadow: 1px 1px 8px #beb7b7;
         text-align: center;
     }
 
     &__content {
         display: flex;
         flex-wrap: wrap;
+        position: relative;
+        top: -20px;
         text-align: center;
 
         @include bp(m) {
@@ -473,7 +477,7 @@ h1, h2 {
 
         &-number {
             @include Marck(75, 800, $c-red);
-            text-shadow: 0px 0px 4px #b8b8b8;
+            text-shadow: 0 0 4px #ae9f9f;
 
             @include bp(m) {
                 font-size: 85px;
@@ -488,11 +492,8 @@ h1, h2 {
             @include Comfortaa(15, 400, #515151);
 
             @include bp(m) {
-                font-size: 18px;
-            }
-
-            @include bp(l) {
-                font-size: 20px;
+                font-size: 17px;
+                line-height: 23px;
             }
         }
     }
@@ -505,6 +506,10 @@ h1, h2 {
         @extend %title;
         text-align: center;
         margin-bottom: 100px;
+
+        @include bp(l) {
+            margin-bottom: 150px;
+        }
     }
 
     &__content {
@@ -589,13 +594,13 @@ h1, h2 {
 }
 
 .Contacts {
-    background: url("../img/bg_contacts.jpg");
     padding: 65px 0;
-    background-size: cover;
-    background-position: center;
 
     @include bp(m) {
         padding: 100px 0;
+        background-image: url("../img/bg-contacts.jpg");
+        background-size: cover;
+        background-position: center;
     }
 
     &__title {
@@ -619,13 +624,13 @@ h1, h2 {
             padding: 15px 20px 15px;
             margin-bottom: 20px;
             border: 1px solid #e4e4e4;
-            border-radius: 5px;
+            border-radius: 2px;
             width: 100%;
-            @include Comfortaa(12, 400, #000);
+            @include Comfortaa(12, 400, $c-text);
 
             &:focus {
                 outline: none;
-                border-color: #000011;
+                border-color: $c-text;
             }
 
             &:focus + .Contacts__row-label {
@@ -640,12 +645,12 @@ h1, h2 {
         }
 
         &-label {
-            @include Comfortaa(12, 400, #505D68);
             position: absolute;
             left: 15px;
             top: 15px;
             transition: .3s;
             background: #fff;
+            @include Comfortaa(12, 400, $c-label);
 
             @include bp(m) {
                 font-size: 15px;
@@ -658,7 +663,7 @@ h1, h2 {
             padding: 15px;
             margin-bottom: 20px;
             border: 1px solid #e4e4e4;
-            border-radius: 5px;
+            border-radius: 2px;
             resize: none;
             @include Comfortaa(12, 400, #000);
 
@@ -681,18 +686,18 @@ h1, h2 {
         &-button {
             position: relative;
             display: block;
-            overflow: hidden;
-            @include Comfortaa(14, 600, $c-red);
             width: 100%;
-            max-width: 150px;
-            height: 40px;
-            border: 2px solid $c-red;
-            text-decoration: none;
+            height: 45px;
+            max-width: 200px;
+            border: 1px solid $c-red;
+            border-radius: 2px;
             transition: 0.5s ease-in-out;
             text-align: center;
-            border-radius: 5px;
-            z-index: 0;
+            text-decoration: none;
             background: #fff;
+            @include Comfortaa(14, 600, $c-red);
+            z-index: 0;
+            overflow: hidden;
             cursor: pointer;
 
             .button__aware {
@@ -717,18 +722,8 @@ h1, h2 {
                 }
             }
 
-            @include bp(m) {
-                font-size: 14px;
-                max-width: 200px;
-                height: 50px;
-            }
-
             @include bp(l) {
                 font-size: 16px;
-            }
-
-            @include bp(md) {
-                font-size: 18px;
             }
         }
     }

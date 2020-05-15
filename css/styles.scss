@@ -324,8 +324,7 @@ h1, h2 {
 
     &__block {
         max-width: 300px;
-        margin: auto;
-        margin-bottom: 40px;
+        margin: 0 auto 40px;
 
         @include bp(md) {
             position: absolute;
@@ -443,15 +442,15 @@ h1, h2 {
 
 .Statistics {
     background-color: rgba(255,255,255,1);
-    background: url("../img/bg-mask.png"), linear-gradient(to bottom, #ffffff 0%, rgba(255,186,89,1) 47%, rgba(255,180,74,1) 56%, rgba(255,174,59,1) 65%, rgba(255,152,0,1) 100%);
+    background: url(../img/bg-mask.png), linear-gradient(to bottom, #ffffff 0%, #fedebb 47%, #fff 100%);
     padding: 70px 0;
     margin-top: 100px;
 
     &__title {
         @extend %title;
         margin-bottom: 100px;
-        text-shadow: 1px 1px 8px #ba7c20;
-        color: #fff;
+        color: $c-red;
+        text-shadow: 1px 1px 8px #beb7b7;
         text-align: center;
     }
 
@@ -474,7 +473,7 @@ h1, h2 {
 
         &-number {
             @include Marck(75, 800, $c-red);
-            text-shadow: 1px 3px 3px rgba(255, 255, 255, .5);
+            text-shadow: 0px 0px 4px #b8b8b8;
 
             @include bp(m) {
                 font-size: 85px;
@@ -486,8 +485,7 @@ h1, h2 {
         }
 
         &-text {
-            @include Comfortaa(15, 400, white);
-            text-shadow: 1px 0 11px #9f6105;
+            @include Comfortaa(15, 400, #515151);
 
             @include bp(m) {
                 font-size: 18px;

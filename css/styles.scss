@@ -293,6 +293,102 @@ h1, h2 {
     }
 }
 
+.AboutAs {
+    background-image: url("../img/bg-AboutAs.jpg");
+    background-size: cover;
+    padding: 70px 0;
+    text-align: center;
+
+    @include bp(md) {
+        padding: 100px 0;
+    }
+
+    &__title {
+        @extend %title;
+        margin-bottom: 50px;
+
+        @include bp(md) {
+            margin-bottom: 130px;
+        }
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        @include bp(md) {
+            display: block;
+        }
+    }
+
+    &__block {
+        max-width: 300px;
+        margin: auto;
+        margin-bottom: 40px;
+
+        @include bp(md) {
+            position: absolute;
+        }
+
+        &-title {
+            @include Marck(24, 600, $c-main-text);
+            margin-bottom: 10px;
+        }
+
+        &-text {
+            @include Comfortaa(15, 600, $c-label);
+        }
+
+        &.first {
+            top: -60px;
+        }
+
+        &.second {
+            top: 260px;
+        }
+
+        &.third {
+            top: -15px;
+            right: 0;
+        }
+    }
+
+    &__image {
+        display: none;
+
+        @include bp(md) {
+            display: block;
+            position: relative;
+            top: -50px;
+            left: 50%;
+            transform: translate(-50%);
+            max-width: 415px;
+        }
+    }
+
+    &__Arrow {
+        display: none;
+        max-width: 150px;
+        position: relative;
+
+        &.ArRed {
+            top: -100px;
+            left: 200px;
+        }
+
+        &.ArBlack {
+            top: -715px;
+            left: 210px;
+        }
+
+        &.ArYellow {
+            top: -360px;
+            left: 780px;
+        }
+    }
+}
+
 .Team {
     background: url(../img/bg-team.jpg);
     background-size: cover;
@@ -599,6 +695,7 @@ h1, h2 {
             border-radius: 5px;
             z-index: 0;
             background: #fff;
+            cursor: pointer;
 
             .button__aware {
                 position: absolute;

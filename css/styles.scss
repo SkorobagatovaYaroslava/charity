@@ -437,7 +437,7 @@ h1, h2 {
         }
 
         &-position {
-            @include Comfortaa(16, 400, $c-text);
+            @include Comfortaa(14, 400, $c-text);
             padding: 15px 0 15px;
             text-transform: lowercase;
         }
@@ -477,7 +477,7 @@ h1, h2 {
 
         &-number {
             @include Marck(75, 800, $c-red);
-            text-shadow: 0 0 4px #ae9f9f;
+            text-shadow: 0 0 9px #ffffff;
 
             @include bp(m) {
                 font-size: 85px;
@@ -600,7 +600,6 @@ h1, h2 {
         padding: 100px 0 30px;
         background-image: url("../img/bg-contacts.jpg");
         background-size: cover;
-        background-position: center;
     }
 
     &__title {
@@ -627,6 +626,7 @@ h1, h2 {
             border-radius: 2px;
             width: 100%;
             @include Comfortaa(12, 400, $c-text);
+            transition: .3s;
 
             &:focus {
                 outline: none;
@@ -666,6 +666,7 @@ h1, h2 {
             border-radius: 2px;
             resize: none;
             @include Comfortaa(12, 400, #000);
+            transition: .3s;
 
             &:focus {
                 outline: none;

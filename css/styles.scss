@@ -1,5 +1,9 @@
 @import "variables";
 
+body {
+    overflow-x:hidden;
+}
+
 * {
     box-sizing: border-box;
     outline: none;
@@ -57,30 +61,30 @@ h1, h2 {
     }
 
     &__logo {
-        max-width: 200px;
+        max-width: 250px;
         margin-left: -60px;
-        padding-top: 10px;
 
         @include bp(m) {
-            max-width: 180px;
+            max-width: 300px;
             margin-left: -15px;
         }
 
         @include bp(l) {
-            max-width: 250px;
+            max-width: 300px;
             margin-left: -50px;
         }
 
         @include bp(md) {
             max-width: 300px;
             margin-left: -45px;
+            margin-top: -30px;
         }
     }
 
     &__menu {
         display: none;
 
-        @include bp(l) {
+        @include bp(md) {
             display: flex;
             align-items: center;
             list-style: none;
@@ -88,7 +92,7 @@ h1, h2 {
 
         &-item {
             margin-right: 25px;
-            margin-top: 25px;
+            margin-top: 10px;
             height: 50px;
             transition: background-position-x 0.9s linear;
             text-align: center;
@@ -105,7 +109,7 @@ h1, h2 {
             &A {
                 @include Marck(20, 600, #000);
                 text-decoration: none;
-                transition: all 0.45s;
+                transition: 0.45s;
             }
         }
     }
@@ -116,7 +120,7 @@ h1, h2 {
     }
 
     .Hamburger {
-        @include bp(l) {
+        @include bp(md) {
             display: none;
         }
     }
@@ -126,10 +130,14 @@ h1, h2 {
         position: relative;
         top: 25px;
         right: 0;
+        margin-top: -5px;
         z-index: 1;
         -webkit-user-select: none;
         user-select: none;
 
+        @include bp(m) {
+            margin-top: 0;
+        }
 
         &Hamburger {
             display: block;
@@ -159,16 +167,15 @@ h1, h2 {
             }
 
             &:checked ~ .menuWrap {
-                transform: none;
-                left: -198px;
+                transform: translate(-50%);
             }
 
         }
 
         &HamburgerLine {
             display: block;
-            width: 33px;
-            height: 4px;
+            width: 30px;
+            height: 3px;
             margin-bottom: 5px;
             position: relative;
             background: #000;
@@ -178,6 +185,12 @@ h1, h2 {
             transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
             background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
             opacity 0.55s ease;
+
+            @include bp(m) {
+                margin-top: 0;
+                width: 33px;
+                height: 4px;
+            }
 
             &:first-child {
                 transform-origin: 0% 0%;
@@ -196,9 +209,10 @@ h1, h2 {
             padding: 50px;
             padding-top: 125px;
             background: #ededed;
+            box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.5);
             list-style-type: none;
             transform-origin: 0% 0%;
-            transform: translate(45%, 0);
+            transform: translate(50%, 0);
             transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 
             &Item {
